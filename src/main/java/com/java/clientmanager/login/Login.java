@@ -7,6 +7,7 @@ public class Login {
 
     public Login(){}
 
+    //create a separate class to interact with db
     public void verifyData(){
         //verification with h2database
     }

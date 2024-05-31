@@ -1,6 +1,6 @@
 package com.java.clientmanager;
 
-import org.springframework.boot.SpringApplication;
+import javafx.application.Application;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
@@ -8,7 +8,7 @@ public class ClientManagerApplication {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(ClientManagerApplication.class, args);
+		Application.launch(MenuApplication.class, args);
 	}
 
 }

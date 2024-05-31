@@ -1,4 +1,8 @@
 package com.java.clientmanager.clients;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
+
 import java.time.LocalDate;
 import java.math.BigDecimal;
 
@@ -10,8 +14,11 @@ import java.math.BigDecimal;
 // ^ odwrócenie zależności i wstrzykiwanie zależności
 // SpringData JPA, wzorzec repository
 // Amigos code
-
+@Entity
 class Client {
+    @Id
+    @GeneratedValue
+    private Long id;
     private String companyName;
     private String ownerName;
     private String ownerSurname;
@@ -106,4 +113,10 @@ class Client {
     public void setEstimatedValue(BigDecimal estimatedValue) {
         this.estimatedValue = estimatedValue;
     }
+
+    public Long getId() {
+        return id;
+    }
+
+
 }

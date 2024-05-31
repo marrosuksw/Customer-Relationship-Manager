@@ -1,12 +1,18 @@
 package com.java.clientmanager.goals;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.GeneratedValue;
 
-
+@Entity
 public class GoalManager {
+    @Id
+    @GeneratedValue
+    private Long id;
     private String goalName;
     private String goalText;
     private boolean goalTick;
     private final int characterTextLimit = 256;
-    private final int characterNameLimit = 32;
+    private final int characterNameLimit = 64;
 
 
     public GoalManager(String goalName, String goalText, boolean goalTick){
@@ -48,5 +54,9 @@ public class GoalManager {
 
     public void setGoalName(String goalName) {
         this.goalName = goalName;
+    }
+
+    public Long getId() {
+        return id;
     }
 }
