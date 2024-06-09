@@ -1,0 +1,9 @@
+.left-form {
+-fx-background-color:linear-gradient(to bottom, #90B2D8, #C1E3FF);
+}
+.right-form{
+-fx-background-color:linear-gradient(to top, #CCF5FF, #FFFFFF);
+}
+.upper-strip{
+-fx-background-color:#0066b2;
+}
