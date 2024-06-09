@@ -16,24 +16,34 @@ public class Statistics {
 
     @Autowired
     public Statistics(ClientCollection clientCollection) {
-        System.out.println("Component Statistics zostal utworzony i zaladowany do systemu");
         this.clientCollection = clientCollection;
+        System.out.println(this.clientCollection.getNumberOfClients());
     }
-
+    //total income from all clients
     public BigDecimal getTotalValueOfClients() {
         int size = clientCollection.getNumberOfClients();
-        
-        return BigDecimal.valueOf(1);
+        return BigDecimal.valueOf(size);
     }
+    //average value of income from all clients
     public BigDecimal getAverageValueOfClients(){
         BigDecimal decimal = getTotalValueOfClients();
         int size = clientCollection.getNumberOfClients();
         BigDecimal averageValue = decimal.divide(BigDecimal.valueOf(size));
         return averageValue;
     }
-    public void getHighestGrossingClient(){
-
+    //highest grossing client in terms of estimated value
+    public Client getHighestGrossingClient(){
+        Client highestGrossClient = new Client();
+        BigDecimal highestPay = new BigDecimal(0);
+        for(Client client : clientCollection.getClientList()) {
+            if (client.getEstimatedValue().compareTo(highestPay) > 0) {
+                highestPay = client.getEstimatedValue();
+                highestGrossClient = client;
+            }
+        }
+        return highestGrossClient;
     }
+
 
 
 

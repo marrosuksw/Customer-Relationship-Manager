@@ -9,15 +9,15 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class MenuApplication extends Application{
     private ConfigurableApplicationContext applicationContext;
     @Override
-    public void start(Stage stage){
+    public void start(Stage stage) throws Exception{
         applicationContext.publishEvent(new StageReadyEvent(stage));
     }
     @Override
-    public void init() throws Exception{
+    public void init() throws Exception {
         applicationContext = new SpringApplicationBuilder(ClientManagerApplication.class).run();
     }
     @Override
-    public void stop() {
+    public void stop() throws Exception{
         applicationContext.close();
         Platform.exit();
     }

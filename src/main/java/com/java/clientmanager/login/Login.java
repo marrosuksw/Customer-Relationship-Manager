@@ -1,16 +1,20 @@
 package com.java.clientmanager.login;
 
+import com.java.clientmanager.clients.ClientCollection;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+
+@Entity
 public class Login {
+    @Id
+    @GeneratedValue
+    private Long id;
     private String username;
     private String password;
 
 
     public Login(){}
-
-    //create a separate class to interact with db
-    public void verifyData(){
-        //verification with h2database
-    }
 
     public String getPassword() {
         return password;

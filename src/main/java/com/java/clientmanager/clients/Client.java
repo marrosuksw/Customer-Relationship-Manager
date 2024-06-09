@@ -15,7 +15,7 @@ import java.math.BigDecimal;
 // SpringData JPA, wzorzec repository
 // Amigos code
 @Entity
-class Client {
+public  class Client {
     @Id
     @GeneratedValue
     private Long id;

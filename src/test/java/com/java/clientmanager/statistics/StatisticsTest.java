@@ -12,7 +12,7 @@ import static org.mockito.Mockito.when;
 
 public class StatisticsTest {
 
-    private final ClientCollection clientCollection = new ClientCollection();
+   // private final ClientCollection clientCollection = new ClientCollection();
     private final ClientCollection clientCollection2 = Mockito.mock(ClientCollection.class);
 
 
