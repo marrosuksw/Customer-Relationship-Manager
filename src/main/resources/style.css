@@ -7,3 +7,6 @@
 .upper-strip{
 -fx-background-color:#0066b2;
 }
+.table-view {
+    -fx-background-color: transparent;
+}

@@ -1,6 +1,5 @@
 package com.java.clientmanager.login;
 
-import com.java.clientmanager.clients.ClientCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;

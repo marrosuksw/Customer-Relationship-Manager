@@ -8,7 +8,7 @@ import java.util.List;
 
 
 @Service
-public class ClientCollection /*implements ClientRepository*/ {
+public class ClientCollection {
 
 
 
@@ -27,5 +27,10 @@ public class ClientCollection /*implements ClientRepository*/ {
     public int getNumberOfClients(){
         return clientRepository.findAll().size();
     }
-
+    //add new client
+    //remove client
+    //update client info
+    public void addClientToList(Client client){
+        clientRepository.save(client);
+    }
 }

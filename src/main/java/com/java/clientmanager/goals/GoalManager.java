@@ -11,8 +11,6 @@ public class GoalManager {
     private String goalName;
     private String goalText;
     private boolean goalTick;
-    private final int  characterTextLimit = 256;
-    private final int characterNameLimit = 64;
 
     public GoalManager(){}
 

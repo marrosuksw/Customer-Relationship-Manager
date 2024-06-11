@@ -31,7 +31,7 @@ public class StageInitializer implements ApplicationListener<MenuApplication.Sta
             fxmlLoader.setControllerFactory(aClass -> applicationContext.getBean(aClass));
             Parent parent = fxmlLoader.load();
             Stage stage = event.getStage();
-            stage.getIcons().add(new Image("file:C:\\Users\\marce\\Desktop\\bpmtb.png"));
+            stage.getIcons().add(new Image("file:C:\\Users\\marce\\Desktop\\stuff\\bpmtb.png"));
             stage.setScene(new Scene(parent, 479, 406));
             stage.setTitle((applicationTitle));
             stage.show();

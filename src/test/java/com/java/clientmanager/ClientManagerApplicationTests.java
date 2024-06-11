@@ -1,9 +1,11 @@
 package com.java.clientmanager;
 
-import com.java.clientmanager.clients.ClientCollection;
+import com.java.clientmanager.clients.*;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
+
+import java.math.BigDecimal;
 
 
 @SpringBootTest

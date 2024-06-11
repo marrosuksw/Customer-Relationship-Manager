@@ -17,7 +17,6 @@ public class Statistics {
     @Autowired
     public Statistics(ClientCollection clientCollection) {
         this.clientCollection = clientCollection;
-        System.out.println(this.clientCollection.getNumberOfClients());
     }
     //total income from all clients
     public BigDecimal getTotalValueOfClients() {

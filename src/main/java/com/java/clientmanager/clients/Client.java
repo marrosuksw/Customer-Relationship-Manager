@@ -25,7 +25,6 @@ public  class Client {
     private String phoneNumber;
     private String emailAddress;
     private LocalDate creationDate; //remember to init in function
-    private String note;
     private BigDecimal estimatedValue; // remember to init in function
     /*
      private variables - collecting Client data
@@ -50,7 +49,6 @@ public  class Client {
         this.phoneNumber = phoneNumber;
         this.emailAddress = emailAddress;
         this.creationDate = creationDate;
-        this.note = note;
         this.estimatedValue = estimatedValue;
     }
 
@@ -96,14 +94,6 @@ public  class Client {
 
     public LocalDate getCreationDate() {
         return creationDate;
-    }
-
-    public String getNote() {
-        return note;
-    }
-
-    public void setNote(String note) {
-        this.note = note;
     }
 
     public BigDecimal getEstimatedValue() {

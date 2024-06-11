@@ -12,6 +12,7 @@ import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.ApplicationContext;
 import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Component;
 
@@ -19,8 +20,7 @@ import java.io.IOException;
 
 @Component
 public class LoginController {
-    @Value ("classpath:/menu.fxml")
-    private Resource resource;
+
     @FXML
     private TextField usernameField;
 
@@ -40,17 +40,28 @@ public class LoginController {
     private StageInitializer stageInitializer;
 
     @Autowired
-    public LoginController(StageInitializer stageInitializer, LoginService loginService){
+    ApplicationContext applicationContext;
+    @Value("classpath:/menu.fxml")
+    private Resource menuResource;
+
+    @Autowired
+    public LoginController(StageInitializer stageInitializer, LoginService loginService, ApplicationContext applicationContext){
         this.stageInitializer = stageInitializer;
         this.loginService = loginService;
+        this.applicationContext = applicationContext;
     }
 
     public boolean buttonVerifyLoginData(){
-        String givenUsername = usernameField.toString();
-        String givenPassword = passwordField.toString();
-
-        return true;
+        Login login = loginService.findLogin();
+        if(login == null) {
+            return false;
+        }
+        if(login.getPassword().equals(passwordField.getText()) && login.getUsername().equals(usernameField.getText())){
+            return true;
+        }
+        return false;
     }
+    @FXML
     public void switchToMainMenu(ActionEvent event) throws IOException {
         try {
         if (!buttonVerifyLoginData()) {
@@ -58,11 +69,12 @@ public class LoginController {
             alert.setTitle("Error message");
             alert.setHeaderText(null);
             alert.setContentText("Please enter correct information");
+            alert.showAndWait();
             return;
         }
 
                 FXMLLoader loader = new FXMLLoader(getClass().getResource("/menu.fxml"));
-
+                loader.setControllerFactory(aClass -> applicationContext.getBean(aClass));
                 Parent root = loader.load(); // This line loads the FXML and its controller automatically
                 Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
                 Scene scene = new Scene(root);
