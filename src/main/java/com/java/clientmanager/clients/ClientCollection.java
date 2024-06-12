@@ -33,4 +33,10 @@ public class ClientCollection {
     public void addClientToList(Client client){
         clientRepository.save(client);
     }
+
+
+    public void removeClient(Client client){
+
+        clientRepository.delete(client);
+    }
 }

@@ -4,7 +4,7 @@
 }
 .table-row-cell: hover {
     -fx-background-color: #FFFFFF;
-    -fx-text-background-color: light-gray;
+    -fx-text-background-color: gray;
 }
 .table-row-cell: odd{
     -fx-background-color: #FFFFFF;

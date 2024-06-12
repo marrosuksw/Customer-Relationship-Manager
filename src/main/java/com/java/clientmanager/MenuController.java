@@ -1,7 +1,4 @@
 package com.java.clientmanager;
-import com.java.clientmanager.clients.ClientController;
-import com.java.clientmanager.goals.GoalController;
-import com.java.clientmanager.statistics.StatisticsController;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -35,16 +32,7 @@ public class MenuController {
     @FXML
     private AnchorPane dynamicPane;
 
-    @Autowired
-    private ClientController clientController;
 
-    @Autowired
-    private GoalController goalController;
-
-    @Autowired
-    private StatisticsController statisticsController;
-
-    @Autowired
     private StageInitializer stageInitializer;
 
     public void onButtonPress(){
@@ -100,20 +88,7 @@ public class MenuController {
 
 
     public void logOut(ActionEvent event) throws IOException {
-        //AnchorPane pane = FXMLLoader.load(getClass().getResource("/menu.fxml"));
         Platform.exit();
-//            try {
-//                FXMLLoader loader = new FXMLLoader(getClass().getResource("/login.fxml"));
-//                loader.setControllerFactory(aClass -> applicationContext.getBean(aClass));
-//                Parent root = loader.load(); // This line loads the FXML and its controller automatically
-//                Stage stage = new Stage();
-//                Scene scene = new Scene(root);
-//                stage.setScene(scene);
-//                stage.centerOnScreen();
-//                stage.show();
-//            } catch (IOException e) {
-//                System.out.println(e.getCause());
-//                throw new RuntimeException();
-//        }
+//
     }
 }

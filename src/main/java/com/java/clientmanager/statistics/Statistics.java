@@ -18,11 +18,15 @@ public class Statistics {
     public Statistics(ClientCollection clientCollection) {
         this.clientCollection = clientCollection;
     }
+
+
     //total income from all clients
     public BigDecimal getTotalValueOfClients() {
         int size = clientCollection.getNumberOfClients();
         return BigDecimal.valueOf(size);
     }
+
+
     //average value of income from all clients
     public BigDecimal getAverageValueOfClients(){
         BigDecimal decimal = getTotalValueOfClients();
@@ -30,6 +34,8 @@ public class Statistics {
         BigDecimal averageValue = decimal.divide(BigDecimal.valueOf(size));
         return averageValue;
     }
+
+
     //highest grossing client in terms of estimated value
     public Client getHighestGrossingClient(){
         Client highestGrossClient = new Client();
@@ -42,7 +48,6 @@ public class Statistics {
         }
         return highestGrossClient;
     }
-
 
 
 

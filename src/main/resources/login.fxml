@@ -8,6 +8,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="406.0" prefWidth="479.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.java.clientmanager.login.LoginController">
    <children>
@@ -22,9 +23,9 @@
       </AnchorPane>
       <AnchorPane layoutX="240.0" layoutY="2.0" prefHeight="406.0" prefWidth="239.0" styleClass="right-form" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="240.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <TextField fx:id="usernameField" layoutX="27.0" layoutY="188.0" prefHeight="30.0" prefWidth="200.0" promptText="Username" />
-            <PasswordField fx:id="passwordField" layoutX="27.0" layoutY="229.0" prefHeight="30.0" prefWidth="200.0" promptText="Password" />
-            <JFXButton fx:id="button" buttonType="RAISED" layoutX="85.0" layoutY="282.0" onAction="#switchToMainMenu" text="Sign in">
+            <TextField fx:id="usernameField" layoutX="27.0" layoutY="203.0" prefHeight="30.0" prefWidth="200.0" promptText="Username" />
+            <PasswordField fx:id="passwordField" layoutX="27.0" layoutY="256.0" prefHeight="30.0" prefWidth="200.0" promptText="Password" />
+            <JFXButton fx:id="button" buttonType="RAISED" layoutX="91.0" layoutY="313.0" onAction="#switchToMainMenu" text="Sign in">
                <font>
                   <Font name="Candara Light" size="14.0" />
                </font>
@@ -32,6 +33,11 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </JFXButton>
+            <Text fill="#202f94" layoutX="21.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CUSTOMER RELATIONSHIP MANAGER" textAlignment="CENTER" wrappingWidth="211.9999176025392">
+               <font>
+                  <Font name="Sylfaen" size="19.0" />
+               </font>
+            </Text>
          </children>
       </AnchorPane>
    </children>

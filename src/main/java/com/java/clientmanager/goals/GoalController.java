@@ -9,11 +9,11 @@ import org.springframework.stereotype.Component;
 public class GoalController {
     //if goal tick = true, change bg goal colour to light green
 
-   @Autowired
-   private GoalService goalService;
+     @Autowired
+    private GoalService goalService;
 
     @Autowired
-    ApplicationContext applicationContext;
+    private ApplicationContext applicationContext;
 
     @Autowired
     public GoalController(GoalService goalService, ApplicationContext applicationContext) {
