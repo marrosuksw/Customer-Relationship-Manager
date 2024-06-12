@@ -7,14 +7,6 @@ import jakarta.persistence.GeneratedValue;
 import java.time.LocalDate;
 import java.math.BigDecimal;
 
-// implement builder
-
-// check lombok
-// @Entity, integracja H2 DB
-// @Component, interfejsy
-// ^ odwrócenie zależności i wstrzykiwanie zależności
-// SpringData JPA, wzorzec repository
-// Amigos code
 @Entity
 public  class Client {
     @Id

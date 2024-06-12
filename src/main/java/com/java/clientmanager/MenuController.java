@@ -2,13 +2,9 @@ package com.java.clientmanager;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Stage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.ApplicationContext;
@@ -20,6 +16,7 @@ import java.io.IOException;
 
 @Component
 public class MenuController {
+
     @FXML
     private TextField textField;
 
@@ -38,24 +35,16 @@ public class MenuController {
     public void onButtonPress(){
         System.out.println("LOGOUT PRESSED");
     }
-    @Autowired
-    private ApplicationContext applicationContext;
 
-    @Autowired
-    private MainViewController mainViewController;
+    private final ApplicationContext applicationContext;
 
     @Value("classpath:/login.fxml")
     private Resource loginResource;
+
     @Autowired
-    public MenuController(ApplicationContext applicationContext, StageInitializer stageInitializer,
-    GoalController goalController, ClientController clientController, StatisticsController statisticsController,
-                          MainViewController mainViewController){
-        this.mainViewController = mainViewController;
+    public MenuController(ApplicationContext applicationContext, StageInitializer stageInitializer){
         this.stageInitializer = stageInitializer;
         this.applicationContext = applicationContext;
-        this.clientController = clientController;
-        this.goalController = goalController;
-        this.statisticsController = statisticsController;
     }
     //create some main menu side class?
     public void showMainView(){
@@ -66,15 +55,16 @@ public class MenuController {
         loadContent("/clients.fxml");
     }
 
-
     public void showStatistics() {
         loadContent("/statistics.fxml");
     }
 
-
     public void showGoals() {
         loadContent("/goals.fxml");
     }
+
+    public void showAddClient() { loadContent("/clientAdd.fxml"); }
+
     private void loadContent(String fxmlFile) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
