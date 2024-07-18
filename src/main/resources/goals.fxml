@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.Cursor?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 
-<AnchorPane prefHeight="600.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.java.clientmanager.goals.GoalController">
+<AnchorPane prefHeight="600.0" prefWidth="673.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.java.clientmanager.goals.GoalController">
    <children>
-      <JFXTextArea labelFloat="true" layoutX="153.0" layoutY="128.0" prefHeight="102.0" prefWidth="464.0" promptText="Write here...">
-         <font>
-            <Font name="Calibri Italic" size="12.0" />
-         </font>
-         <cursor>
-            <Cursor fx:constant="TEXT" />
-         </cursor>
-      </JFXTextArea>
-      <Text layoutX="46.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goals">
+      <Text layoutX="46.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Goals &amp; Notes">
          <font>
             <Font name="Candara Bold" size="34.0" />
          </font>
       </Text>
+      <TextArea fx:id="textArea" cache="true" cacheHint="QUALITY" layoutX="40.0" layoutY="100.0" prefHeight="437.0" prefWidth="592.0" styleClass="left-form" stylesheets="@style.css">
+         <font>
+            <Font name="Cambria" size="14.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+      </TextArea>
+      <JFXButton buttonType="RAISED" layoutX="63.0" layoutY="554.0" onAction="#writeText" prefHeight="24.0" prefWidth="56.0" styleClass="left-form" stylesheets="@style.css" text="Save">
+         <font>
+            <Font name="Cambria" size="12.0" />
+         </font>
+      </JFXButton>
    </children>
 </AnchorPane>

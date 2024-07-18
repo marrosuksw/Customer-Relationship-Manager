@@ -1,7 +1,18 @@
 package com.java.clientmanager.clients;
 
-public class ClientTest {
+import org.junit.jupiter.api.Test;
+import org.mockito.configuration.IMockitoConfiguration;
+import org.springframework.boot.test.context.SpringBootTest;
 
-    Client client = new Client();
+@SpringBootTest
+class ClientCollectionTest{
 
+//    private ClientCollection clientCollection = new ClientCollection();
+//    @Test
+//    public void addClientTest(){
+//        Client client = new Client();
+//
+//
+//    }
 }
+

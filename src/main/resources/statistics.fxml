@@ -1,9 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
-
 
 <AnchorPane prefHeight="600.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.java.clientmanager.statistics.StatisticsController">
    <children>
@@ -12,5 +15,43 @@
             <Font name="Candara Bold" size="34.0" />
          </font>
       </Text>
+      <BarChart fx:id="barChart" layoutX="14.0" layoutY="267.0" prefHeight="318.0" prefWidth="401.0">
+         <xAxis>
+            <CategoryAxis label="Company Name" />
+         </xAxis>
+         <yAxis>
+            <NumberAxis label="Estimated Value" />
+         </yAxis>
+      </BarChart>
+      <AnchorPane layoutX="438.0" layoutY="47.0" prefHeight="90.0" prefWidth="201.0" style="-fx-background-color: gray;" stylesheets="@style.css">
+         <children>
+            <Text fill="WHITE" layoutX="7.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Average income from clients:">
+               <font>
+                  <Font name="Candara Bold" size="17.0" />
+               </font>
+            </Text>
+            <Label fx:id="averageVal" layoutX="100.0" layoutY="58.0" text="Label" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="438.0" layoutY="163.0" prefHeight="90.0" prefWidth="221.0" style="-fx-background-color: gray;" stylesheets="@style.css">
+         <children>
+            <Text fill="WHITE" layoutX="7.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total income from clients">
+               <font>
+                  <Font name="Candara Bold" size="17.0" />
+               </font>
+            </Text>
+            <Label fx:id="totalVal" layoutX="97.0" layoutY="58.0" text="Label" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="438.0" layoutY="279.0" prefHeight="90.0" prefWidth="221.0" style="-fx-background-color: gray;" stylesheets="@style.css">
+         <children>
+            <Text fill="WHITE" layoutX="7.0" layoutY="26.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Highest Gross Value">
+               <font>
+                  <Font name="Candara Bold" size="17.0" />
+               </font>
+            </Text>
+            <Label fx:id="highestGrossVal" layoutX="27.0" layoutY="58.0" text="Label" textFill="WHITE" />
+         </children>
+      </AnchorPane>
    </children>
 </AnchorPane>

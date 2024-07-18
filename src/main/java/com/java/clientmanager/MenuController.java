@@ -65,6 +65,8 @@ public class MenuController {
 
     public void showAddClient() { loadContent("/clientAdd.fxml"); }
 
+    public void showUpdateClient() { loadContent("/clientUpdate.fxml");}
+
     private void loadContent(String fxmlFile) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
@@ -75,10 +77,7 @@ public class MenuController {
             e.printStackTrace();
         }
     }
-
-
-    public void logOut(ActionEvent event) throws IOException {
+    public void logOut(ActionEvent event)  {
         Platform.exit();
-//
     }
 }

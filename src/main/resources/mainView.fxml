@@ -9,14 +9,24 @@
 <AnchorPane prefHeight="600.0" prefWidth="673.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.java.clientmanager.MainViewController">
    <children>
       <FlowPane layoutX="459.0" layoutY="386.0" prefHeight="200.0" prefWidth="200.0" />
-      <Text layoutX="41.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lorem Ipsum">
+      <Text layoutX="75.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome to the Customer Relationship Manager App!" textAlignment="CENTER" wrappingWidth="509.75921630859375">
          <font>
-            <Font name="Calibri Bold" size="33.0" />
+            <Font name="Calibri Bold" size="30.0" />
          </font>
       </Text>
-      <Text fill="#5b5b5b" layoutX="59.0" layoutY="102.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CEO of szewuf in Blue Peter Media Company" wrappingWidth="142.76312255859375">
+      <Text fill="#5b5b5b" layoutX="50.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="All company logos were provided by the Blue Peter Media company after mutual agreement" wrappingWidth="237.1631317138672">
          <font>
-            <Font name="Calibri" size="14.0" />
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#5b5b5b" layoutX="50.0" layoutY="226.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Version control available at: https://github.com/marrosuksw/Customer-Relationship-Manager" wrappingWidth="438.7631072998047">
+         <font>
+            <Font name="Calibri" size="16.0" />
+         </font>
+      </Text>
+      <Text fill="#5b5b5b" layoutX="50.0" layoutY="292.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Current version: ver. 0.0.4" wrappingWidth="237.1631317138672">
+         <font>
+            <Font name="Calibri" size="16.0" />
          </font>
       </Text>
    </children>

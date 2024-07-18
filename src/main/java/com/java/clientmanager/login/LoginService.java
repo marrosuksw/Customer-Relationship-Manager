@@ -16,10 +16,6 @@ public class LoginService {
     public Login findLogin() {
         Login login = loginRepository.findById(0);
         System.out.println(login.getUsername());
-        if(login == null){
-            System.out.println("it's empty");
-            return null;
-        }
         return login;
     }
 

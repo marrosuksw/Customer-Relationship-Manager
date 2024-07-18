@@ -20,7 +20,7 @@ class ClientManagerApplicationTests {
 		//given
 		//when
 		//then
-		Assertions.assertEquals(true, true);
+//		Assertions.assertEquals(true, true);
 	}
 	
 }

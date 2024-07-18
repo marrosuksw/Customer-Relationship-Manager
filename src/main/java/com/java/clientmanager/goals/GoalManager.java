@@ -10,34 +10,14 @@ public class GoalManager {
     private Long id;
     private String goalName;
     private String goalText;
-    private boolean goalTick;
 
     public GoalManager(){}
 
-    public GoalManager(String goalName, String goalText, boolean goalTick){
+    public GoalManager(String goalName, String goalText){
         this.goalName = goalName;
         this.goalText = goalText;
-        this.goalTick = goalTick;
     }
 
-
-    public boolean createGoal() {
-        // frontend interactions needed
-        /*
-        - check if goalName is shorter than 32
-        - check if goalText is shorter than 256
-         */
-        return true;
-    }
-
-
-    public boolean isGoalTick() {
-        return goalTick;
-    }
-
-    public void setGoalTick(boolean goalTick) {
-        this.goalTick = goalTick;
-    }
 
     public String getGoalText() {
         return goalText;

@@ -25,7 +25,7 @@ public  class Client {
         companyName = compName;
 //        setCreationDate(creationDate.now());
     }
-
+    //Client
     public Client(String companyName, String ownerName, String ownerSurname, String phoneNumber, String emailAddress, LocalDate creationDate, BigDecimal estimatedValue) {
         this.companyName = companyName;
         this.ownerName = ownerName;
@@ -93,4 +93,7 @@ public  class Client {
     }
 
 
+    public void setId(Long id) {
+        this.id = id;
+    }
 }

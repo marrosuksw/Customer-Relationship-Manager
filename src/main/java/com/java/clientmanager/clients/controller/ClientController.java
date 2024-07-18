@@ -57,10 +57,12 @@ public class ClientController {
         loadClientData();
     }
 
+    private UpdateClientController updateClientController;
     @Autowired
-    public ClientController(ClientCollection clientCollection, MenuController menuController){
+    public ClientController(ClientCollection clientCollection, MenuController menuController, UpdateClientController updateClientController){
         this.menuController = menuController;
         this.clientCollection = clientCollection;
+        this.updateClientController = updateClientController;
     }
 
     private void loadClientData() {
@@ -75,13 +77,32 @@ public class ClientController {
 
     @FXML
     private void removeClient(ActionEvent event) {
+        if(clientTableView.getSelectionModel().getSelectedItem() == null){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error message");
+            alert.setHeaderText(null);
+            alert.setContentText("Select a client to be removed");
+            alert.showAndWait();
+            return;
+        }
         Client selectedClient = clientTableView.getSelectionModel().getSelectedItem();
         clientTableView.getItems().remove(selectedClient);
         clientCollection.removeClient(selectedClient);
     }
     @FXML
     private void updateClient(ActionEvent event){
+        if(clientTableView.getSelectionModel().getSelectedItem() == null){
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error message");
+            alert.setHeaderText(null);
+            alert.setContentText("Select a client to be updated");
+            alert.showAndWait();
+            return;
+        }
         Client selectedClient = clientTableView.getSelectionModel().getSelectedItem();
+        updateClientController.setCurrentClient(selectedClient);
+        menuController.showUpdateClient();
+
 
     }
 

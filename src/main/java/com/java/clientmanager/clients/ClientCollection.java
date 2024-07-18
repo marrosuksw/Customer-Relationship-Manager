@@ -1,4 +1,5 @@
 package com.java.clientmanager.clients;
+import com.java.clientmanager.clients.controller.UpdateClientController;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,7 +31,10 @@ public class ClientCollection {
 
 
     public void removeClient(Client client){
-
         clientRepository.delete(client);
+    }
+    public void updateClientById(Client client){
+        clientRepository.findById(client.getId());
+        clientRepository.save(client);
     }
 }

@@ -5,6 +5,7 @@ import java.time.Instant;
 import java.time.LocalDate;
 
 public class ClientBuilder {
+    private Long id;
     private String companyName;
     private String ownerName;
     private String ownerSurname;
@@ -18,6 +19,10 @@ public class ClientBuilder {
 
     public static ClientBuilder builder() {
         return new ClientBuilder();
+    }
+    public ClientBuilder withId(Long id){
+        this.id = id;
+        return this;
     }
 
     public ClientBuilder withCompanyName(String companyName) {

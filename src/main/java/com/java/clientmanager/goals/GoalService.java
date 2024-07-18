@@ -16,8 +16,11 @@ public class GoalService {
     //create goal
     //remove goal
     //update goal all with .save()
-    public void createGoal(){
-
+    public void createGoal(GoalManager goal){
+        goalRepository.save(goal);
+    }
+    public void getGoal(GoalManager goal) {
+        goalRepository.findById(goal.getId());
     }
 }
 
